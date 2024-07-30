@@ -1,0 +1,19 @@
+
+.page {
+    min-height: 100vh;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+.secondaryHeaderOfPage{
+
+margin-top: 100px;
+display: flex;
+flex-direction: row;
+gap: 50px;
+
+
+
+    
+}

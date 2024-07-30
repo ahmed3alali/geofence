@@ -58,7 +58,7 @@ const Slider = () => {
             <img src={UsersIcon} alt="Users" />
             Users
           </a>
-          <a href="#" className="item font-custom font-light">
+          <a href="/reports" className="item font-custom font-light">
             <img src={ReportsIcon} alt="Reports" />
             Reports
           </a>

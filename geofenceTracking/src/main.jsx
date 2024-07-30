@@ -19,6 +19,7 @@ import Departments from './components/Departments/Departments.jsx';
 import Shifts from './components/Shifts/Shifts.jsx';
 import Employees from './components/Employees/Employees.jsx';
 import Users from './components/Users/Users.jsx';
+import Reports from './components/Reports/Reports.jsx';
 
 
 
@@ -120,7 +121,24 @@ element:<>
 
 
 
-  }
+  },
+
+  {
+
+    path:"/reports",
+    
+    element:<>
+    
+    <Slider></Slider>
+    <Reports></Reports>
+    
+    
+    </>
+    
+    
+    
+    
+      }
 
 
 ]);
