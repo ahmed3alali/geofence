@@ -1,0 +1,23 @@
+
+
+.HeadingOfPage{
+
+
+display: flex;
+
+padding: 20px; /* Space around the container */
+    margin-left: 10%;
+
+
+}
+
+.title{
+
+
+display: flex;
+margin-right: auto;
+
+
+}
+
+

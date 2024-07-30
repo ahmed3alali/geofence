@@ -1,0 +1,115 @@
+.page {
+    min-height: 100vh;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+
+  .headerOfPage {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    position: fixed; /* Fix the header position */
+    top: 0;
+    left: 250px; /* Align the header to start after the slider */
+    right: 0;
+    background-color: white; /* Ensure the header background covers content behind it */
+    z-index: 10; /* Ensure the header is on top */
+  }
+
+
+    
+  .topHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 10px; /* Add padding for content inside the header */
+  }
+  
+
+   
+  .titleOfHeader {
+    display: flex;
+    margin-right: auto;
+  }
+  
+  .titleOfHeader p {
+    font-size: 50px;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .theColorSelection {
+    padding: 2px;
+    border-radius: 45px;
+    background: grey;
+    width: 54px;
+    height: 52px;
+  }
+  
+  .profilePicCircle {
+    padding: 2px;
+    border-radius: 45px;
+    background: grey;
+    width: 54px;
+    height: 52px;
+  }
+  
+  .ZonesColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .ZonesColor label {
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+
+
+  .save-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 163px;
+    height: 48px;
+    border-radius: 35px;
+    background: grey;
+    margin-bottom: 50px;
+    /* Fix the button position */
+     /* Adjust this value to place the button where you want */
+    left: 300px; /* Ensure the button starts directly after the slider */
+  }
+
+
+  .save-btn .item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px;
+    font-size: 11px;
+  }
+
+
+  .contentOfPage{
+
+display: flex;
+flex-direction: column;
+
+margin-top: 25%;
+
+
+  }

@@ -1,0 +1,59 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  height: 100vh;
+  width: 250px; /* Set a fixed width */
+  position: fixed; /* Fix the slider on the left */
+  top: 0;
+  left: 0;
+  border-radius: 20px; /* Rounded corners */
+  background-color: white; /* Background color of the slider */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.042); /* Optional shadow for better visibility */
+  z-index: 50; /* Make sure it's above other elements */
+}
+
+.logo {
+  text-align: center;
+  padding: 20px;
+  color: black;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.logo h2 {
+  font-size: 1.4rem;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1; /* Allow the menu-list to grow and take up remaining space */
+  overflow-y: auto; /* Add scrolling if content exceeds the height */
+}
+
+.menu-list .item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    height: 100vh; /* Ensure full height on larger screens */
+    width: 250px; /* Maintain fixed width */
+    position: fixed; /* Keep fixed positioning */
+    top: 0;
+    left: 0;
+  }
+
+
+
+}

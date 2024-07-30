@@ -1,0 +1,185 @@
+.page {
+    min-height: 100vh;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .headerOfPage {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    position: fixed; /* Fix the header position */
+    top: 0;
+    left: 250px; /* Align the header to start after the slider */
+    right: 0;
+    background-color: white; /* Ensure the header background covers content behind it */
+    z-index: 10; /* Ensure the header is on top */
+  }
+  
+  .topHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 10px; /* Add padding for content inside the header */
+  }
+  
+  .titleOfHeader {
+    display: flex;
+    margin-right: auto;
+  }
+  
+  .titleOfHeader p {
+    font-size: 50px;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .theColorSelection {
+    padding: 2px;
+    border-radius: 45px;
+    background: grey;
+    width: 54px;
+    height: 52px;
+  }
+  
+  .profilePicCircle {
+    padding: 2px;
+    border-radius: 45px;
+    background: grey;
+    width: 54px;
+    height: 52px;
+  }
+  
+  .ZonesColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .ZonesColor label {
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  
+  .SecondaryHeader {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row; /* Add top margin equal to the header height */
+  }
+  
+  .searchBar {
+    margin-right: 100px;
+  }
+  
+  .theColorSelection {
+    margin-right: auto;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .options .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .ZoneCardOptions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce the gap if 20px is too much */
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  
+  .ZoneTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce the gap if 20px is too much */
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-content: center;
+    margin-right: auto;
+  }
+  
+  .mapContainer {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .Card {
+    padding: 20px; /* Adjust as needed */
+    width: 116px; /* Increase if necessary */
+    height: 57px; /* Allow height to adjust based on content */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Ensure the card items stack vertically */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .cardDescription .icon img {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+  }
+  
+  .cardDescription {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Ensure items are centered vertically */
+    margin-right: auto;
+    gap: 10px;
+    flex-direction: row;
+  }
+  
+  .CardsHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-right: 150px;
+    margin-top: 80px;
+    margin-left: 0;
+  }
+  
+  .zoneTitle p {
+    font-size: 11px;
+  }
+  
+  .zoneOptions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    justify-content: center;
+    height: 57px; /* Ensure the total height is 57px */
+  }
+  
+  .ZoneCardOptions {
+    font-size: 0.9rem; /* Reduce font size if necessary */
+    padding: 5px; /* Adjust padding as needed */
+  }
+  

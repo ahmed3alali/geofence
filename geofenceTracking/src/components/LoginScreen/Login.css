@@ -1,0 +1,71 @@
+
+
+
+
+  
+
+
+  
+
+.squareFrame{
+ margin-top: 25%;
+
+display: flex;
+align-items: center;
+border-radius: 50px;
+justify-content: center;
+
+
+}
+
+
+
+   
+  
+  .bar{
+margin-top: 0;
+background-color: white;
+height: 100px;
+border: 50px;
+width: 100%;
+top: 0;
+right: 0;
+position: fixed;
+z-index: 1000;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  }
+
+
+.logo{
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+
+.logo img{
+top: 0;
+height: 100px;
+
+
+}
+
+.Heading{
+
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 70px;
+
+
+}
+
+
+.w-full {
+    width: 50%;
+}
