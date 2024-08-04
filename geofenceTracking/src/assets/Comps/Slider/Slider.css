@@ -9,7 +9,7 @@
   left: 0;
   border-radius: 20px; /* Rounded corners */
   background-color: white; /* Background color of the slider */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.042); /* Optional shadow for better visibility */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0); /* Optional shadow for better visibility */
   z-index: 50; /* Make sure it's above other elements */
 }
 

@@ -9,7 +9,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // Existing font
         custom: ['Kanit', 'sans-serif'],
-        bodyFont: ['Syne'] // Add the Kanit font
+        titleFont: ['Syne'] // Add the Kanit font
       },
     },
   },

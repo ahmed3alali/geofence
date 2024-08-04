@@ -17,3 +17,47 @@ gap: 50px;
 
     
 }
+
+.userChosen_Reports{
+
+display: flex;
+flex-direction: column;
+
+}
+
+.userChosen_Reports label{
+
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: 10px;
+  
+  }
+
+  .firstCol {
+
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+
+  }
+
+  .secondCol{
+
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+  }
+
+
+  .save-btn_Reports {
+    width: 163px;
+    height: 48px;
+    border-radius: 35px;
+    margin-bottom: 100px;
+   
+  }
+
+

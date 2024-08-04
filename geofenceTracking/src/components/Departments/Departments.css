@@ -78,14 +78,14 @@
 
 
 
-  .save-btn {
+  .save-btn_Departments {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 163px;
     height: 48px;
     border-radius: 35px;
-    background: grey;
+ 
     margin-bottom: 50px;
     /* Fix the button position */
      /* Adjust this value to place the button where you want */
@@ -93,7 +93,7 @@
   }
 
 
-  .save-btn .item {
+  .save-btn_Departments .item {
     display: flex;
     align-items: center;
     flex-direction: row;

@@ -1,0 +1,44 @@
+.beg_page{
+margin-top: 100px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 15%;
+}
+
+
+.save-btn_Emps {
+    width: 163px;
+    height: 48px;
+    border-radius: 35px;
+    margin-bottom: 100px;
+   
+  }
+
+
+
+
+  .EmpActionsBtns{
+
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    justify-content: center;
+    gap: 15px;
+
+
+  }
+
+
+  .BulkActions{
+
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    justify-content: center;
+    gap: 15px;;
+
+  }

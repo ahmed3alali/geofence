@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../Employees/Employess.css'
 const Employees = () => {
   return (
     <div className='page'>
@@ -17,10 +17,7 @@ const Employees = () => {
                   <input type="text" placeholder="Search" />
                 </div>
               </div>
-              <div className="ZonesColor">
-                <label>Zone's Color</label>
-                <div className="theColorSelection"></div>
-              </div>
+            
               <div className="ProfilePic">
                 <div className="profilePicCircle"></div>
               </div>
@@ -29,26 +26,35 @@ const Employees = () => {
     </div>
     
     
-    <div className="contentOfPage">
+    <div className="beg_page">
     
-    
-    <div className="save-btn">
+    <div className="BulkActions">
+    <div className="save-btn_Emps bg-[#C2D4E4]">
                 <a href="#" className="item font-custom font-light">
-                  
+                  <p>Bulk Action</p>
                 </a>
               </div>
 
-              <div className="save-btn">
+
+    </div>
+   
+<div className="EmpActionsBtns">
+
+
+<div className="save-btn_Emps bg-[#C2D4E4]">
                 <a href="#" className="item font-custom font-light">
-                  
+                  <p> New Employee</p>
                 </a>
               </div>
     
-              <div className="save-btn">
+              <div className="save-btn_Emps bg-[#C2D4E4]">
                 <a href="#" className="item font-custom font-light">
-                  
+                <p>Import Employee </p>
                 </a>
               </div>
+
+</div>
+          
     
     
     
@@ -85,10 +91,18 @@ const Employees = () => {
               <thead
                 class="border-b border-neutral-200 bg-white font-medium dark:border-white/10 dark:bg-body-dark">
                 <tr>
-                  <th scope="col" class="px-6 py-4">#</th>
-                  <th scope="col" class="px-6 py-4">First</th>
-                  <th scope="col" class="px-6 py-4">Last</th>
-                  <th scope="col" class="px-6 py-4">Handle</th>
+                  <th scope="col" class="px-6 py-4">Name</th>
+                  <th scope="col" class="px-6 py-4">Phone</th>
+                  <th scope="col" class="px-6 py-4">Department</th>
+                  <th scope="col" class="px-6 py-4">Shift</th>
+                  <th scope="col" class="px-6 py-4">Status</th>
+                  <th scope="col" class="px-6 py-4">OPS</th>
+                  <th scope="col" class="px-6 py-4">Gender</th>
+                  <th scope="col" class="px-6 py-4">Nationality</th>
+                  <th scope="col" class="px-6 py-4">Edit</th>
+                  <th scope="col" class="px-6 py-4">Activate/Deactivate</th>
+                  
+                  
                 </tr>
               </thead>
               <tbody>
