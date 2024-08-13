@@ -17,12 +17,15 @@ const[updateDepartmentIndex, setUpdatedDepartmentIndex] = useState(null);
   const [selectedColor, setSelectedColor] = useState('#2563eb'); // Default color
 
   // State to manage departments
+
+ 
   const [departments, setDepartments] = useState([]);
   
 
   // Function to open the modal
   const openModal = () => {
     console.log('Opening modal'); // Debugging
+
     setIsModalOpen(true);
   };
 

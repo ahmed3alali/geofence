@@ -1,4 +1,18 @@
+
+@import 'flowbite/dist/flowbite.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "path-to-flowbite/dist/flowbite.css";
+
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
+
+  html, body {
+    height: 100%;
+  }
 

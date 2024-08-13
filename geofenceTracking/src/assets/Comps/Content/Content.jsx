@@ -15,9 +15,7 @@ const Content = () => {
             <img src={NotificationIcon} alt="Notification Icon" />
           </div>
 
-          <div className="profile-settings" style={{ backgroundColor: 'rgba(217, 217, 217, 1)' }}>
-            {/* Add content here if needed */}
-          </div>
+          
         </div>
       </div>
     </div>

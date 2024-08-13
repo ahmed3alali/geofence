@@ -1,12 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from 'react-router-dom';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import Slider from './assets/Comps/Slider/Slider.jsx';
 import Profile from './components/Profile/Profile.jsx';
@@ -20,132 +19,122 @@ import Shifts from './components/Shifts/Shifts.jsx';
 import Employees from './components/Employees/Employees.jsx';
 import Users from './components/Users/Users.jsx';
 import Reports from './components/Reports/Reports.jsx';
+import CreateAccount from './components/CreateAccount/CreateAccount.jsx';
+
+const MainApp = () => {
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  const toggleSlider = () => {
+    setIsSliderOpen(!isSliderOpen);
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          
+          <Card />
+        </>
+      ),
+    },
+    {
+      path: "/profile",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Profile toggleMenu={toggleSlider} />
+        </>
+      ),
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/zones",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Zones />
+        </>
+      ),
+    },
+    {
+      path: "/shifts",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Shifts />
+        </>
+      ),
+    },
+    {
+      path: "/departments",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Departments />
+        </>
+      ),
+    },
+    {
+      path: "/employees",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Employees />
+        </>
+      ),
+    },
+    {
+      path: "/users",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Users />
+        </>
+      ),
+    },
+    {
+      path: "/reports",
+      element: (
+        <>
+          <Slider isOpen={isSliderOpen} toggleMenu={toggleSlider} />
+          <Reports />
+        </>
+      ),
+    },
+    {
+      path: "/createAccount",
+      element: (
+        <>
+       
+   <main>
+   <CreateAccount></CreateAccount>
+
+   </main>
+        
+        </>
+      ),
+    },
 
 
 
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App></App>
-  },
 
-  {
-    path: "/dashboard",
-    element: <>
-    <Slider></Slider>
-    <TopBody></TopBody>
-    <Content></Content>
-    <Card></Card>
-    </>
-  },
- 
+  ]);
 
-  {
-    path: "/profile",
-    element:  <>
-    <Slider />
-    <Profile />
-  </>
-
-
-  },
-
-  {
-
-path: "/login",
-element: <Login></Login>
-
-  },
-
-  {path:"/zones",
-    element:<>
-    <Slider></Slider>
-    <Zones></Zones>
-    </>
-  },
-
-
-
-  {
-
-
-path:"/shifts",
-element:<>
-
-<Slider></Slider>
-<Shifts></Shifts>
-
-</>
-
-
-  },
-
-
-
-  {
-    path:"/departments",
-    element: <>
-    
-    <Slider></Slider>
-    <Departments></Departments>
-    
-    </>
-  
-  },
-
-  {
-    path:"/employees",
-    element: <>
-    
-    <Slider></Slider>
-  <Employees></Employees>
-    
-    </>
-  
-  },
-
-
-  {
-
-path:"/users",
-
-element:<>
-
-<Slider></Slider>
-<Users></Users>
-
-
-</>
-
-
-
-
-  },
-
-  {
-
-    path:"/reports",
-    
-    element:<>
-    
-    <Slider></Slider>
-    <Reports></Reports>
-    
-    
-    </>
-    
-    
-    
-    
-      }
-
-
-]);
-
+  return <RouterProvider router={router} />;
+};
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MainApp />
   </React.StrictMode>,
-)
+);

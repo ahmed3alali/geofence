@@ -10,6 +10,7 @@ import Card from './assets/Comps/Card/Card'
 import TopBody from './assets/Comps/TopBody/TopBody'
 import Profile from './components/Profile/Profile'
 import Zones from './components/Zones/Zones'
+import Charts from './components/Charts/Charts'
 
 
 function App() {
@@ -17,8 +18,7 @@ function App() {
 
   return (
     <>
-<Slider></Slider>
-<Zones></Zones>
+<Login></Login>
 
 
     </>

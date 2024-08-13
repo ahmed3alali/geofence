@@ -1,3 +1,24 @@
+.page_Users {
+
+
+width: calc(100%-250px);
+margin-left: 250px;
+
+top: 0;
+   
+position: fixed;
+  
+height: 100vh;
+
+z-index: 1000; 
+
+
+
+
+}
+
+
+
 .UsersCreation{
 
 
@@ -18,11 +39,10 @@ margin-left: 50px;
     gap: 50px;
   }
   
-  /* Styles for input fields */
   .registrationInput_Users input {
-     /* Change background color */
-    border: 2px solid #00000030; /* Add black border */
-    border-radius: 15px; /* Rounded corners */
+
+    border: 2px solid #00000030; 
+    border-radius: 15px; 
     padding: 10px;
     width: 358px;
     box-sizing: border-box;
@@ -51,6 +71,17 @@ margin-left: 5px;
 }
 
 
+
+
+.error-message {
+
+  color: red;
+  margin-right: auto;
+
+
+}
+
+
 .save-btn_Users {
     display: flex;
     align-items: center;
@@ -60,11 +91,11 @@ margin-left: 5px;
     border-radius: 35px;
  
     margin-bottom: 50px;
-    /* Fix the button position */
-     /* Adjust this value to place the button where you want */
+   
+     
    margin-left: auto;
    margin-right: 150px;
-   /* Ensure the button starts directly after the slider */
+   
   }
 
 
@@ -79,3 +110,30 @@ margin-left: 5px;
   }
 
 
+  @media (max-width: 768px) {
+
+
+    .page_Users{
+
+
+margin-left: 0;
+width: 100%;
+position: static;
+
+    }
+
+    .UsersCreation{
+
+flex-direction: column;
+gap: 50px;
+margin-top: 50%;
+
+margin-right: 50px;
+
+    }
+
+
+    
+
+
+  }

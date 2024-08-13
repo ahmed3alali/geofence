@@ -1,68 +1,212 @@
 import React, { useState } from 'react';
 import '../Users/Users.css';
-
+import MenuIcon from '../../assets/icons/Menu.png';
+import { Dropdown, TextInput ,Avatar} from "flowbite-react";
 const Users = () => {
   const [showTable, setShowTable] = useState(false);
+const [formValues, setFormValues] = useState({
+
+
+firstName: '',
+email: '',
+password: '',
+confirmPassword:'',
+lastName:'',
+phoneNumber:'',
+
+
+
+
+});
+
+const [errors, setErrors] = useState({});
 
   const handleAddClick = () => {
-    setShowTable(!showTable);
+
+const {firstName, email, password, confirmPassword, lastName, phoneNumber} = formValues;
+let newErrors= {};
+
+
+if (!firstName) newErrors.firstName ='First name is required';
+if (!email) newErrors.email = 'Email is required';
+if (!password) newErrors.password = 'password is required';
+if(!confirmPassword) newErrors.confirmPassword = 'Confirm password is required';
+if (!lastName) newErrors.lastName = 'last name is required';
+if (!phoneNumber) newErrors.phoneNumber = 'Phone number is required';
+
+
+if (password!==confirmPassword) newErrors.confirmPassword = "Passwords dont match";
+
+
+
+if(Object.keys(newErrors).length===0) {
+
+
+setShowTable(!showTable);
+setErrors({});
+
+
+} else{
+
+setErrors(newErrors);
+
+
+}
+
+
+
+
+
   };
 
+  const handleInputChange = (e) =>{
+
+
+    const {name, value} = e.target;
+
+    setFormValues({
+
+
+...formValues,
+[name]:value,
+
+
+    });
+
+
+
+  };
+
+
+
+
+
   return (
-    <div className="page font-custom relative">
+    <div className="page_Users font-custom relative">
       <div className="headerOfPage">
-        <div className="topHeader">
-          <div className="titleOfHeader">
-            <p className="font-custom font-light">Users</p>
-          </div>
-          <div className="searchBar">
-            <div
-              className="search-box w-[299px]"
-              style={{ backgroundColor: "rgba(217, 217, 217, 0.30)" }}
-            >
-              <input type="text" placeholder="Search" />
-            </div>
-          </div>
-          
-          <div className="ProfilePic">
-            <div className="profilePicCircle"></div>
-          </div>
-        </div>
+      <div className="topHeader">
+  <div
+    className="md:hidden cursor-pointer" 
+    
+  >
+    <img src={MenuIcon} alt="Menu Icon" className="w-8 h-8" />
+  </div>
+  <div className="titleOfHeader_Profile">
+    <p className="font-custom font-light">Users</p>
+  </div>
+  <div className="ProfilePic mr-4 md:mr-0"> 
+    <Dropdown
+      label={<Avatar alt="User settings" img="" rounded />}
+      arrowIcon={false}
+      inline
+    >
+      <Dropdown.Header>
+        <span className="block text-sm">Bonnie Green</span>
+        <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+      </Dropdown.Header>
+      <Dropdown.Item>Dashboard</Dropdown.Item>
+      <Dropdown.Item>Settings</Dropdown.Item>
+      <Dropdown.Item>Earnings</Dropdown.Item>
+      <Dropdown.Divider />
+      <Dropdown.Item>Sign out</Dropdown.Item>
+    </Dropdown>
+  </div>
+</div>
+
       </div>
+
+
+
+
+      
 
       <div className={`UsersCreation transition-opacity duration-700 ${showTable ? 'opacity-0 h-0' : 'opacity-100 h-auto'}`}>
         <div className="firstClmn">
           <div className="registrationInput_Users">
             <label>First Name</label>
-            <input type="text" />
+            <input type="text"
+            name="firstName"
+            value={formValues.firstName}
+            onChange={handleInputChange}
+            
+            
+            />
+{errors.firstName && <p className='error-message'>{errors.firstName}</p>}
+
           </div>
           <div className="registrationInput_Users">
-            <label>Email</label>
-            <input type="text" />
+            <label>Last Name</label>
+            <input type="text"
+            name="email"
+            value={formValues.email}
+            onChange={handleInputChange}
+            
+            />
+
+{errors.email &&  <p className='error-message'>{errors.email}</p>}
+
           </div>
           <div className="registrationInput_Users">
-            <label>Password</label>
-            <input type="text" />
+            <label>Phone Number</label>
+            <input type="text"
+            name='password'
+            value={formValues.password}
+            onChange={handleInputChange}
+            
+            />
+
+
+{errors.password && <p className='error-message'>{errors.password}</p>}
+
           </div>
         </div>
 
         <div className="secondClmn">
           <div className="registrationInput_Users">
-            <label>Last Name</label>
-            <input type="text" />
-          </div>
-          <div className="registrationInput_Users">
-            <label>Phone Number</label>
-            <input type="text" />
+            <label>Password</label>
+            <input type="text"
+            name="lastName"
+            value={formValues.lastName}
+            onChange={handleInputChange}
+            
+            />
+
+{errors.lastName && <p className='error-message'>{errors.lastName}</p>}
+
           </div>
           <div className="registrationInput_Users">
             <label>Confirm Password</label>
-            <input type="text" />
+            <input type="text"
+            name='phoneNumber'
+            value={formValues.phoneNumber}
+            onChange={handleInputChange}
+            
+            
+            />
+
+            {errors.phoneNumber && <p className='error-message'>{errors.phoneNumber}</p>}
+
+
+
+
+          </div>
+          <div className="registrationInput_Users">
+            <label>Email Address</label>
+            <input type="text"
+            name='confirmPassword'
+            value={formValues.confirmPassword}
+            onChange={handleInputChange}
+            
+            
+            />
+
+{errors.confirmPassword && <p className='error-message'>{errors.confirmPassword}</p>}
+
           </div>
         </div>
       </div>
 
-      <div className="save-btn_Users bg-[#C2D4E4] fixed bottom-4 right-4 z-10">
+      <div className="save-btn_Users bg-[#C2D4E4] bottom-4 right-4 z-10 ">
         <a href="#" className="item font-custom font-light" onClick={handleAddClick}>
           <p className='text-[15px]'>add</p>
         </a>

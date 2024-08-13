@@ -52,3 +52,66 @@ margin-bottom: 10%;
 font-size: 45px;
 
 }
+
+
+
+
+
+
+
+.Card_Shifts {
+    padding: 20px; /* Adjust as needed */
+    width: 116px; /* Increase if necessary */
+    height: 57px; /* Allow height to adjust based on content */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Ensure the card items stack vertically */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .cardDescription_Shifts .icon img {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+  }
+  
+  .cardDescription_Shifts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Ensure items are centered vertically */
+    margin-right: auto;
+    gap: 10px;
+    flex-direction: row;
+  }
+  
+  .CardsHeader_Shifts {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-right: 150px;
+    margin-top: 80px;
+    margin-left: 0;
+  }
+  
+  .zoneTitle_Shifts p {
+    font-size: 11px;
+  }
+  
+  .zoneOptions_Shifts {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    justify-content: center;
+    height: 57px; /* Ensure the total height is 57px */
+  }
+  
+  .ZoneCardOptions_Shifts {
+    font-size: 0.9rem; /* Reduce font size if necessary */
+    padding: 5px; /* Adjust padding as needed */
+  }
+  
+
+
+  

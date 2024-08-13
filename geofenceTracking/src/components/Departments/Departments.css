@@ -2,19 +2,35 @@
     min-height: 100vh;
     margin-left: 250px;
     width: calc(100% - 250px);
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
+
+    top: 0;
+   
+  
+    height: 100vh;
+
+    z-index: 1000; 
+  
+
+  
+
+
+
+
+
+
   }
 
 
   .headerOfPage {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     height: 100px;
-    position: fixed; /* Fix the header position */
+    position: fixed; 
     top: 0;
-    left: 250px; /* Align the header to start after the slider */
+    left: 250px; 
     right: 0;
-    background-color: white; /* Ensure the header background covers content behind it */
-    z-index: 10; /* Ensure the header is on top */
+    background-color: white; 
+    z-index: 10; 
   }
 
 
@@ -27,7 +43,7 @@
     gap: 100px;
     width: 100%;
     padding: 0 20px;
-    padding-top: 10px; /* Add padding for content inside the header */
+    padding-top: 10px; 
   }
   
 
@@ -38,7 +54,7 @@
   }
   
   .titleOfHeader p {
-    font-size: 50px;
+    font-size: 40px;
   }
   
   .search-box input {
@@ -87,9 +103,9 @@
     border-radius: 35px;
  
     margin-bottom: 50px;
-    /* Fix the button position */
-     /* Adjust this value to place the button where you want */
-    left: 300px; /* Ensure the button starts directly after the slider */
+    
+     
+    left: 300px; 
   }
 
 
@@ -109,7 +125,7 @@
 display: flex;
 flex-direction: column;
 
-margin-top: 25%;
+margin-top: 100px;
 
 
   }

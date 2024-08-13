@@ -10,21 +10,12 @@ import DashboardIcon from '../../icons/NavDashboardIcon.png';
 import ProfileIcon from '../../icons/NavProfileIcon.png';
 import GeofenceLogo from '../../Logo.png';
 import MenuIcon from '../../icons/Menu.png';
-const Slider = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+const Slider = ({isOpen, toggleMenu}) => {
+  
 
   return (
     <div>
-       <div
-        className="lg:hidden p-4 m-4 text-black bg-gray-200 rounded cursor-pointer"
-        onClick={toggleMenu}
-      >
-        <img src={MenuIcon} alt="Menu Icon" className="w-8 h-8" />
-      </div>
+     
       <div className={`menu ${isOpen ? 'block' : 'hidden'} lg:block bg-gradient-to-r from-[rgba(168,185,187,0.4)] to-[rgba(0,215,234,0.3)]`}>
         <div className="logo">
           <img src={GeofenceLogo} alt="Logo" />

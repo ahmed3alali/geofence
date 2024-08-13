@@ -1,0 +1,43 @@
+
+.Register{
+
+
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1000; 
+    overflow: auto; 
+
+  
+
+
+
+}
+
+
+
+
+.Widgets {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; 
+  }
+  
+  .Widgets label {
+    margin-bottom: 0.5rem; 
+    text-align: left; 
+  }
+  
+  
+  .Widgets input {
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 0.5rem; 
+    width: 100%; 
+  }
+  

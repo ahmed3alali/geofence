@@ -2,7 +2,7 @@ import React from 'react'
 import { FaEdit, FaTrash } from 'react-icons/fa';
 const departments = [
     { id: 1, name: 'dep 1', color: 'gray' },
-    // Add more department data here
+   
   ];
 const DataTable = () => {
     return (

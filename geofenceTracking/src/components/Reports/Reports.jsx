@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../../components/Reports/Reports.css';
 
+import { Datepicker, Label, Select } from "flowbite-react";
+
+
 const Reports = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [reportGenerated, setReportGenerated] = useState(false); // Add state for report generation
+  const [reportGenerated, setReportGenerated] = useState(false); 
 
   const toggleDropdown = (dropdownId) => {
     setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
@@ -23,15 +26,15 @@ const Reports = () => {
   }, []);
 
   const handleGenerateReport = () => {
-    setReportGenerated(true); // Set reportGenerated to true when button is pressed
+    setReportGenerated(true); 
   };
 
   const handleBack = () => {
-    setReportGenerated(false); // Set reportGenerated to false when back button is pressed
+    setReportGenerated(false); 
   };
 
   return (
-    <div className="page">
+    <div className="page_Reports">
       <div className="headerOfPage">
         <div className="topHeader">
           <div className="titleOfHeader">
@@ -106,60 +109,94 @@ const Reports = () => {
           </div>
         </div>
       ) : (
-        <div className="secondaryHeaderOfPage">
+        <div className="secondaryHeaderOfPage  ">
           <div className="firstCol">
-            <Dropdown
-              subject="Reports"
-              id="reports-dropdown"
-              title="All Reports"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
-            <Dropdown
-              subject="Dates from"
-              id="date-dropdown_from"
-              title="12-07-2018"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
-            <Dropdown
-              subject="Department"
-              id="department-dropdown"
-              title="All Departments"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
-            <Dropdown
-              subject="Zone"
-              id="zone-dropdown"
-              title="All Zones"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
+          <div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+
+<div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+
+<div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+<div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+
           </div>
 
           <div className="secondCol">
-            <Dropdown
-              subject="Shift"
-              id="shift-dropdown"
-              title="All Shifts"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
-            <Dropdown
-              subject="Dates to"
-              id="date-dropdown_to"
-              title="15-09-2024"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
-            <Dropdown
-              subject="Employees"
-              id="employess-dropdown"
-              title="Options"
-              openDropdown={openDropdown}
-              toggleDropdown={toggleDropdown}
-            />
+          <div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+
+<div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+
+<div className="r_dropdown max-w-md flex items-center mb-4">
+  <div className="dropLabel mr-4">
+    <Label htmlFor="countries" value="Report" />
+  </div>
+  <Select id="countries" className='selctionBox w-[300px]' required>
+    <option>All Reports</option>
+    <option>Report 1</option>
+    <option>Report 2</option>
+    <option>Report 3</option>
+  </Select>
+</div>
+
 
             <div className="save-btn_Reports mt-8 bg-[#C2D4E4]">
               <a href="#" onClick={handleGenerateReport} className="item font-custom font-light">

@@ -1,30 +1,90 @@
 .cardUI {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Space between rows */
-    padding: 20px; /* Space around the container */
+    gap: 40px; 
+    padding: 20px; 
     margin-left: 10%;
     margin-top: 1%;
     align-items: center;
 
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1000; 
+    overflow: auto; 
+
+
+
+  }
+  .navOptions{
+
+    display: flex;
+   flex-direction: row;
+   
+
+   margin-right: auto;
+
+  
+
+    
+      }
+
+
+   
+      
+
+  
+  .headerOfPage_Profile_Dashbaord {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    position: fixed; 
+    top: 0;
+    left: 250px; 
+    right: 0;
+    background-color: white; 
+    z-index: 10; 
+  }
+
+
+
+
+
+
+
+
+
+  .card-container_first {
+
+    margin-top: 100px;
+    display: flex;
+
+    justify-content: space-between; 
+    gap: 100px; 
+  }
+
+
+  .card-container_second {
+
+    margin-top: 20px;
+    display: flex;
+
+    justify-content: space-between; 
+    gap: 100px; 
+  }
+
+  .graphContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 60px; 
+    margin-top: 20px;
   }
   
-  .card-container {
-    display: flex;
-    justify-content: space-between; /* Equal space between cards in a row */
-    gap: 100px; /* Space between cards in a row */
-  }
-
-  .graphContainer{
-
-    display: flex;
-    justify-content: space-between; /* Equal space between cards in a row */
-    gap: 100px; /* Space between cards in a row */
-margin-right: auto;
-margin-left: 25px;
-margin-top: 20px;
-
-  }
   
   .card {
 
@@ -55,33 +115,177 @@ margin-right: 25px;
   }
 
 
+  
+
+
 
 
   .barGraphContainer {
     border-radius: 45px;
     display: flex;
-    flex-direction: row;
-    
+    justify-content: center; 
+    align-items: center; 
     padding: 20px;
-      background-color: rgba(218, 238, 240, 0.45); /* This should apply the background color */
-    
-      width: 600px;
-      height: 300px;
-      margin-left: 25px;
-      
-    }
+    background-color: rgba(218, 238, 240, 0.45); 
+    width: 600px; 
+    height: 300px; 
+    margin-right: auto;
+
+  }
+  
 
 
     .pieGraphContainer{
-
+margin-left: 40px;
 border-radius: 45px;
 display: flex;
 flex-direction: row;
 padding: 20px;
-background-color: rgba(218, 238, 240, 0.45); /* This should apply the background color */
+background-color: rgba(218, 238, 240, 0.45);
 
 width: 264px;
       height: 300px;
       ;
 
     }
+
+
+    
+ 
+
+
+
+  
+    .titleOfHeader_Profile_Dashboard {
+      display: flex;
+      margin-right: auto;
+      margin-left: 48px;
+     justify-content: center;
+     align-items: center;
+    
+    }
+
+
+    .titleOfHeader_Profile_Dashboard p {
+      font-size: 35px;
+    }
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .cardUI {
+    position: static; 
+    margin-left: 0; 
+    margin-top: 0; 
+    width: 100vw; 
+    height: auto; 
+    padding: 10px; 
+  }
+
+
+
+  .MainCardsContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    justify-content: center; 
+    margin-left: 2px;
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .card-container_first,
+  .card-container_second {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    width: 100%; 
+    justify-content: center; 
+   
+margin-bottom: 10px;
+
+  }
+
+  .card {
+    width: calc(50% - 5px); 
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+  }
+
+  .graphContainer {
+    width: 100%;
+ margin-right: 10px;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .barGraphContainer{
+
+  width: 100%;
+
+  }
+
+  .pieGraphContainer{
+    margin-left: 10px;
+ 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+    background-color: rgba(218, 238, 240, 0.45);
+    
+    width: 100%;
+          height: 300px;
+          ;
+    
+        }
+
+
+
+
+
+
+.card.totalEmps{
+
+width: 100%;
+
+
+}
+
+.card.Absent{
+
+  width: 100%;
+  
+  
+  }
+
+  .navOptions{
+
+display: flex;
+flex-direction: row;
+gap: 5px;
+justify-content: space-between;
+
+  }
+
+
+  
+ 
+
+
+
+}
+

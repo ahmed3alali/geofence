@@ -1,11 +1,34 @@
-/* General styles for the profile page */
+
+.main{
+
+
+top: 0;
+   
+  
+height: 100vh;
+
+z-index: 1000; 
+
+
+
+
+
+
+}
+
+
 .profile-page {
     display: flex;
-    margin-top: 50px;
+    flex-direction: column;
+    
     justify-content: center;
    width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
  
+    margin-left: 250px;
+    position: fixed;
+
+
   }
 
 
@@ -13,13 +36,12 @@
   .headerOfPage_Profile {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     height: 100px;
-    position: fixed; /* Fix the header position */
+    position: fixed; 
     top: 0;
-    left: 250px; /* Align the header to start after the slider */
+    left: 250px;
     right: 0;
-    background-color: white; /* Ensure the header background covers content behind it */
-    z-index: 10; /* Ensure the header is on top */
-  }
+    background-color: white; 
+    z-index: 10; }
 
 
   .infoInputs {
@@ -34,7 +56,7 @@
 
 
 
-  .registrationInput {
+  .registrationInput,.registrationInput_Email {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -42,15 +64,35 @@
     gap: 50px;
   }
   
-  /* Styles for input fields */
+
+
+
+  
   .registrationInput input {
-     /* Change background color */
-    border: 2px solid #00000030; /* Add black border */
-    border-radius: 15px; /* Rounded corners */
+    
+    border: 2px solid #00000030; 
+    border-radius: 15px; 
     padding: 10px;
     width: 358px;
     box-sizing: border-box;
   }
+
+  .registrationInput_Email input {
+   
+   border: 2px solid #00000030; 
+   border-radius: 15px; 
+   padding: 10px;
+   width: 358px;
+   box-sizing: border-box;
+ }
+
+
+ 
+  
+  
+
+
+  
 
 
   .dropDowns {
@@ -90,9 +132,9 @@
 
 
         font-weight: light;
-        margin-right: 10px; /* Add margin to separate label from input */
+        margin-right: 10px; 
         display: inline-block;
-        width: 150px; /* Fixed width for labels */
+        width: 150px; 
         text-align: left; 
 
 
@@ -100,7 +142,6 @@
     
   
 
-  /* Container for creating the profile */
   .creatingProfile {
     display: flex;  
     flex-direction: row;
@@ -115,7 +156,6 @@ margin-left: 10px;
    
   }
   
-  /* Styles for the company logo section */
   .CompanyLogo {
     display: flex;
     flex-direction: column;
@@ -123,13 +163,16 @@ margin-left: 10px;
     width: 75%;
     margin-left: 100px;
   }
+
   
-  /* Styles for the profile logo */
   .profileLogo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-bottom: 10px;
   }
   
-  /* Styles for the upload button */
+ 
   .upload-btn {
     width: 163px;
     height: 48px;
@@ -138,7 +181,7 @@ margin-left: 10px;
   }
 
 
-  .save-btn_Profile {
+  .save-btn_Profile{
     width: 163px;
     height: 48px;
     border-radius: 35px;
@@ -146,9 +189,23 @@ margin-left: 10px;
     
   }
 
+  .save-btn_Profile_End {
+    width: 163px;
+    height: 48px;
+    border-radius: 35px;
+    background: #D9D9D9;
+   
+
+  }
+  
 
 
-  .save-btn_Profile .item {
+
+  
+
+
+
+  .save-btn_Profile .item{
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -158,8 +215,23 @@ margin-left: 10px;
     font-size: 11px;
   }
 
+
   
-  /* Styles for the upload button item */
+  .save-btn_Profile_End .item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px;
+    font-size: 11px;
+    
+  }
+
+
+
+
+
   .upload-btn .item {
     display: flex;
     align-items: center;
@@ -170,112 +242,183 @@ margin-left: 10px;
     font-size: 11px;
   }
   
-  /* Styles for the dropdowns section */
+  
  
-  /* Styles for the info inputs section */
+
  
   
-  /* Styles for individual registration input fields */
+
   
   
-  /* Styles for labels */
+
   .registrationInput label {
     font-weight: light;
-    margin-right: 10px; /* Add margin to separate label from input */
+    margin-right: 10px; 
     display: inline-block;
-    width: 150px; /* Fixed width for labels */
-    text-align: left; /* Align text to the right */
+    width: 150px; 
+    text-align: left; 
   }
+
+  .registrationInput_Email label {
+    font-weight: light;
+    margin-right: 10px; 
+    display: inline-block;
+    width: 150px; 
+    text-align: left; 
+  }
+
+
   
-  /* Styles for user-chosen section */
 
 
  .endOfAccount{
-
-  margin-top: 260px;
+display: flex;
+align-items: center;
+justify-content: center;
+  
+margin-left: 160px;
+ 
   
 
 
  }
 
  @media (max-width: 768px) {
-
-
-
-  .headerOfPage_Profile {
-    left: 0; /* Reset left alignment for small screens */
-    right: 0; /* Ensure full width on small screens */
-    height: 80px; /* Adjust height for smaller screens if needed */
-    padding: 0 10px; /* Adjust padding for small screens */
+  .profile-page {
+    margin-top: 20px;
+    position: static;
+    flex-direction: column; 
+    min-height: 100vh;
+    margin-left: 0px;
+    
   }
 
   .creatingProfile {
     flex-direction: column;
     width: 100%;
     margin-left: 0;
-}
+    
+  }
 
-.profile-page {
-    flex-direction: column;
-    align-items: center;
-}
+  .endOfAccount {
+    margin-top: auto; 
+    margin-bottom: 20px; 
+    margin-right: 100px;
+    
+  }
 
-.infoInputs {
+  .headerOfPage_Profile {
+    left: 0; 
+    right: 0; 
+    height: 80px; 
+    padding: 0 10px; 
+  }
+
+  .infoInputs {
     width: 100%;
-}
+  }
 
-.registrationInput {
+  .registrationInput {
     gap: 20px;
-}
+  }
 
-.userChosen {
+  .userChosen {
     gap: 20px;
-}
+  }
 
-.dropDowns {
+  .dropDowns {
     width: 100%;
-}
+  }
 
-.CompanyLogo {
-  order: -1;
-  flex-direction: row;
+  .CompanyLogo {
+    order: -1;
     width: 100%;
     margin-left: 0;
     gap: 5px;
     align-items: center;
-}
+  }
 
-.upload-btn, .save-btn_Profile {
+  .save-btn_Profile {
     width: 200px;
     height: 50px;
     border-radius: 50px;
     padding: 2px;
     font-size: 10px;
-}
+  }
 
+  .upload-btn .item img {
+   
+    
 
-.upload-btn .item img {
+  }
 
-display: none;
-
-
-
-}
-
-.profileLogo {
-
-    width: 100%;
+  .profileLogo {
+    width: 25%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
+    align-items: center;
+  }
 
-.endOfAccount {
-    margin-top: 20px;
-}
-}
+  .endOfAccount {
+    display: flex;
+    align-items: center;
+    margin-top: auto; 
+    margin-bottom: 20px; 
+    justify-content: center;
+    margin-left:30%;
+     
+  }
+
+.emailInput{
+
+  width: 100%;
  
 
-  /* Styles for dropdown button */
+
+
+}
+
+
+
+.registrationInput_Email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 10px
+}
+
+
+
+
+.registrationInput_Email input{
+
+  border: 2px solid #00000030; 
+  border-radius: 15px; 
+  padding: 10px;
+  width: 310px;
+  height: 50px;
+  box-sizing: border-box;
+
+
+}
+
+
+
+.registrationInput_Email label {
+  font-weight: light;
+   
+  display: inline-block;
+ margin-right: 2px; 
+  text-align: left; 
+}
+
+
+
+}
+
+ 
   
  
   .topHeader {
@@ -286,7 +429,7 @@ display: none;
     gap: 100px;
     width: 100%;
     padding: 0 20px;
-    padding-top: 10px; /* Add padding for content inside the header */
+    padding-top: 10px; 
   }
   
   .titleOfHeader_Profile {
@@ -324,4 +467,16 @@ display: none;
     width: 54px;
     height: 52px;
   }
+
+
+  
+
+.dropdown-container .dropdown-menu {
+  border: 1px solid black; 
+}
+
+.dropdown-container .dropdown-item {
+  border: 1px solid black; 
+}
+
   

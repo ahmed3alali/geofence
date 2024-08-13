@@ -1,26 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../Shifts/Shifts.css';
 
 import zoneDescription from "../../assets/icons/zoneDescription.png";
 import viewBtnIcon from "../../assets/icons/viewBtn.png";
 import deleteBtnIcon from "../../assets/icons/deleteBtn.png";
+import { Button, Modal } from 'flowbite-react';
+import { HiOutlineExclamationCircle } from "react-icons/hi";
 
-const shifts = [
+const initialShifts = [
   { id: 1, name: 'Shift 1' },
-  { id: 1, name: 'Shift 2' },
-  { id: 1, name: 'Shift 3' },
-  { id: 1, name: 'Shift 4' },
-  { id: 1, name: 'Shift 5' },
-  { id: 1, name: 'Shift 6' },
-  { id: 1, name: 'Shift 7' },
-  { id: 1, name: 'Shift 8' },
+  { id: 2, name: 'Shift 2' },
+  { id: 3, name: 'Shift 3' },
+  { id: 4, name: 'Shift 4' },
+  { id: 5, name: 'Shift 5' },
+  { id: 6, name: 'Shift 6' },
+  { id: 7, name: 'Shift 7' },
+  { id: 8, name: 'Shift 8' },
 ];
 
 const Shifts = () => {
+  const [shifts, setShifts] = useState(initialShifts);
   const [shiftName, setShiftName] = useState('Select a Shift');
+  const [selectedShiftId, setSelectedShiftId] = useState(null);
+  const [openWarning, setOpenWarning] = useState(false);
+  const [showTable, setShowTable] = useState(false);
+
+  const tableRef = useRef(null);
 
   const handleViewClick = (shiftName) => {
     setShiftName(shiftName);
+    setShowTable(true);
+    setTimeout(() => {
+      tableRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  };
+
+  const handleDelete = (shiftId) => {
+    setShifts(shifts.filter(shift => shift.id !== shiftId));
+    setOpenWarning(false);
+    setSelectedShiftId(null);
+  };
+
+  const confirmDelete = (shiftId) => {
+    setSelectedShiftId(shiftId);
+    setOpenWarning(true);
   };
 
   return (
@@ -37,23 +60,22 @@ const Shifts = () => {
       </div>
 
       <div className="contentOfPage_Shifts">
-        
         {shifts.map(shift => (
-          <div key={shift.id} className="CardsHeader">
-            <div className="Card bg-[#C2D4E4]">
-              <div className="cardDescription">
+          <div key={shift.id} className="CardsHeader_Shifts">
+            <div className="Card_Shifts bg-[#C2D4E4]">
+              <div className="cardDescription_Shifts">
                 <a href="#" className="ZoneTitle font-custom font-light">
                   <img src={zoneDescription} alt="ViewOption" />
                   {shift.name}
                 </a>
               </div>
             </div>
-            <div className="zoneOptions">
+            <div className="zoneOptions_Shifts">
               <a href="#" className="ZoneCardOptions font-custom font-light" onClick={() => handleViewClick(shift.name)}>
                 <img src={viewBtnIcon} alt="ViewOption" />
                 View
               </a>
-              <a href="#" className="ZoneCardOptions font-custom font-light">
+              <a href="#" className="ZoneCardOptions font-custom font-light" onClick={() => confirmDelete(shift.id)}>
                 <img src={deleteBtnIcon} alt="DeleteOption" />
                 Delete
               </a>
@@ -62,7 +84,7 @@ const Shifts = () => {
         ))}
       </div>
 
-      <div className="ZonesTable_Shifts">
+      <div ref={tableRef} className={`ZonesTable_Shifts ${showTable ? 'slide-down' : 'slide-up'}`}>
         <div className="zoneTitle_Shifts">
           <h1 className='font-custom font-light'>{shiftName}</h1>
         </div>
@@ -106,6 +128,26 @@ const Shifts = () => {
           </div>
         </div>
       </div>
+
+      <Modal show={openWarning} size="md" onClose={() => setOpenWarning(false)} popup>
+        <Modal.Header />
+        <Modal.Body>
+          <div className="text-center">
+            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+              Are you sure you want to delete this shift?
+            </h3>
+            <div className="flex justify-center gap-4">
+              <Button color="failure" onClick={() => handleDelete(selectedShiftId)}>
+                {"Yes, I'm sure"}
+              </Button>
+              <Button color="gray" onClick={() => setOpenWarning(false)}>
+                No, cancel
+              </Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };
